@@ -1,0 +1,157 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+
+    <style>
+        body,ul,li{
+            padding: 0;
+            margin: 0;
+            list-style: none;
+        }
+        *{
+            box-sizing: border-box;
+        }
+        .box{
+            width:700px;height: 550px;
+            position:fixed;top:0;bottom:0;left:0;right:0;margin: auto;
+            overflow: hidden;
+            border-radius: 40px;
+            box-shadow: 15px 15px 20px #999;
+        }
+        .menu{
+            width: 100%;
+            height: 50px;
+            background: #ccc;
+            line-height: 50px;
+            text-align: center;
+        }
+        .menu .menu-list{
+            width: 14.2835%;height: 100%;
+            background: #74a5a5;float: left;
+            transition: all 1s ease;
+            line-height: 50px;
+            cursor: pointer;
+            text-align: center;
+            font-family: "微软雅黑";
+        }
+        .menu .menu-list:hover{
+            background: #000;
+            color:#fff;
+        }
+        .main{
+            width: 100%;height: 600px;position: relative;
+        }
+        .main .aside-menu{
+            width: 24%;height:100%;overflow: auto;
+            text-align: center;line-height: 30px;
+            font-family: "微软雅黑";
+            background: #a0cfcc;
+        }
+        .main .aside-menu .aside-menu-list li{
+            background: red;margin-top: 10px;
+            cursor: pointer;background: #74a5a5;
+            transition: all 1s ease;
+        }
+        .main .aside-menu .aside-menu-list li:hover{
+            background: #025863;
+            color:#fff;
+        }
+        .main .canvas-box{
+            width: 76%;height: 100%;position: absolute;
+            top:0;right: 0;
+        }
+        .main .canvas-box canvas{
+            background: #bbdddc;
+        }
+        .main .canvas-box .copy{
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            left:0;
+            top:0;
+            z-index: 999;
+        }
+        .aside-menu {
+            text-align: center;
+            line-height: 30px;
+            cursor: pointer;
+        }
+        .aside-menu-list:not(:first-child){
+            display: none;
+        }
+        .xp{
+            width: 10px;
+            height: 10px;
+            border: 1px solid #000;
+            position: absolute;
+            left: 0;
+            top: 0;
+            display: none;
+        }
+    </style>
+    <script src="js/jquery.js"></script>
+    <script src="js/shape1.js"></script>
+    <script src="js/canvas.js"></script>
+</head>
+<body>
+<div class="box">
+    <ul class="menu">
+        <li class="menu-list">文件</li>
+        <li class="menu-list" >画图</li>
+        <li class="menu-list">颜色</li>
+        <li class="menu-list">画图方式</li>
+        <li class="menu-list">线条宽度</li>
+        <li class="menu-list">橡皮</li>
+        <li class="menu-list">图片处理</li>
+    </ul>
+    <div class="main">
+        <aside class="aside-menu">
+            <ul class="aside-menu-list">
+                <li>新建</li>
+                <li>撤销</li>
+                <li>保存</li>
+            </ul>
+            <ul class="aside-menu-list">
+                <li data-role="line">线条</li>
+                <li data-role="rect">矩形</li>
+                <li data-role="arc">圆</li>
+                <li data-role="bian">多边形</li>
+                <li data-role="jiao">多角形</li>
+                <li data-role="pen">铅笔</li>
+            </ul>
+            <ul class="aside-menu-list">
+                border: <li><input type="color" data-role="border"></li>
+                fill: <li><input type="color" data-role="fill"></li>
+            </ul>
+            <ul class="aside-menu-list">
+                <li data-role="stroke">划线</li>
+                <li data-role="fill">填充</li>
+            </ul>
+            <ul class="aside-menu-list">
+                <li data-role="1">细</li>
+                <li data-role="2">中</li>
+                <li data-role="3">粗</li>
+                <li data-role="null">num:<input type="number"></li>
+            </ul>
+            <ul class="aside-menu-list">
+                大小:<li><input type="number" value="10"></li>
+            </ul>
+            <ul class="aside-menu-list">
+                <input type="file">
+                <li data-role="blur">模糊</li>
+                <li data-role="fx">反相</li>
+                <li data-role="m">马赛克</li>
+                <img src="" alt="" hidden>
+            </ul>
+        </aside>
+        <div class="canvas-box">
+            <canvas></canvas>
+            <div class="copy"></div>
+            <div class="xp"></div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
