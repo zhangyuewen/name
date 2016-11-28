@@ -15,38 +15,43 @@ html,body{
     height: 100%;backface-visibility: visible;
 }
 .scene .room .panel:nth-child(1){
-    background: url(../img/tian1.jpg);
-    background-size:60px 60px ;
+    background: url(../img/fd.jpg);
+    background-size:cover;
     transform-origin: top;
     transform: rotateX(90deg);
-    box-shadow: 0 0 100px #999 inset;
+    /*box-shadow: 0 0 100px #999 inset;*/
     transform-style: preserve-3d;
 }
 .scene .room .panel:nth-child(2){
-    background: #bdf3f3;
+    /*background: #8FACCA;*/
+    background:#D3E5E5 url(../img/zpqt1.jpg) no-repeat center;
+    background-size: cover;
     transform-origin: left;
     transform: rotateY(-90deg);
-    box-shadow: 0 0 100px #999 inset;
+    /*box-shadow: 0 0 100px #999 inset;*/
     transform-style: preserve-3d;
 }
 .scene .room .panel:nth-child(3){
-    background:#D3E5E5 url(../img/ch.jpg) no-repeat center;
-    box-shadow: 0 0 100px #999 inset;
+    background:#D3E5E5 url(../img/zpqt1.jpg) no-repeat center;
+    background-size: cover;
+    /*box-shadow: 0 0 100px #999 inset;*/
 }
 .scene .room .panel:nth-child(4){
-    background: #bdf3f3;
+    /*background: #afd0ee;*/
+    background:#D3E5E5 url(../img/zpqt1.jpg) no-repeat center;
+    background-size: cover;
     transform-origin:right;
     transform: rotateY(90deg);
-    box-shadow: 0 0 100px #999 inset;
+    /*box-shadow: 0 0 100px #999 inset;*/
     transform-style: preserve-3d;
 }
 .scene .room .panel:nth-child(5){
-    background: url(../img/diban.jpg);
+    background: url(../img/diban1.jpeg);
     transform-origin: bottom;
     transform: rotateX(-90deg);
 }
 .scene .room .panel:nth-child(6){
-    background: url(../img/zpq4.jpg) no-repeat center center;
+    background: url(../img/zpqt2.jpg) no-repeat center center;
     background-size:cover ;
 }
 .left .iconfont{

@@ -19,7 +19,7 @@ h6 {
   list-style: none;
 }
 body {
-  background-image: url(../img/page-bg.jpg);
+  background-image: url(../img/bjtp.jpg);
   background-size: cover;
 }
 .main-body {
@@ -156,6 +156,9 @@ body {
   line-height: 250px;
   text-align: center;
   font-family: "Adobe Hebrew";
+  font-family: "微软雅黑";
+  color: #000;
+  font-weight: bold;
 }
 .menu-con-left {
   width: 150px;
@@ -175,7 +178,9 @@ body {
   background: #9F381A;
   line-height: 150px;
   text-align: center;
-  font-family: "Adobe Hebrew";
+  ffont-family: "微软雅黑";
+  color: #000;
+  font-weight: bold;
 }
 .menu-con-right a {
   width: 150px;
@@ -184,7 +189,9 @@ body {
   background: #5A9827;
   line-height: 150px;
   text-align: center;
-  font-family: "Adobe Hebrew";
+  font-family: "微软雅黑";
+  color: #000;
+  font-weight: bold;
 }
 .menu-con:nth-child(3) a {
   width: 310px;
@@ -193,7 +200,9 @@ body {
   background: url(../img/menu-bg-gallery.png);
   line-height: 250px;
   text-align: center;
-  font-family: "Adobe Hebrew";
+  font-family: "微软雅黑";
+  color: #000;
+  font-weight: bold;
 }
 .menu-con:nth-child(4) a:nth-child(1) {
   width: 310px;
@@ -285,6 +294,11 @@ h1 {
   margin: 0 auto;
   margin-top: 50px;
   background: url(../img/home-img-1.png) no-repeat;
+  background-size: contain;
+  transition: all 1s ease;
+}
+.zxj:hover {
+  width: 300px;
 }
 .accord-two p {
   font-weight: 600;
@@ -293,6 +307,8 @@ h1 {
   padding-right: 10px;
 }
 .button1 {
+  display: block;
+  text-align: center;
   width: 150px ;
   height: 40px;
   background: #363636;
@@ -301,7 +317,7 @@ h1 {
   margin-left: 10px;
   font-family: inherit;
   font-size: inherit;
-  line-height: inherit;
+  line-height: 40px;
   color: #fff;
   font-family: "微软雅黑";
   transition: all 1s ease;
@@ -391,22 +407,7 @@ hr {
 .pic-nei {
   width: 47%;
   height: 47% ;
-  background: #000;
   float: left;
-}
-.pic-nei img {
-  width: 100%;
-}
-.pic-nei p {
-  width: 100%;
-  color: #fff;
-  bottom: 0px;
-  padding: 18px 10px;
-  margin: 0px 0px;
-  text-transform: uppercase;
-  font-size: 13px;
-  font-weight: 600;
-  background-color: rgba(21, 150, 144, 0.8);
 }
 .pic-nei:nth-child(1) {
   margin-right: 5%;
@@ -555,9 +556,14 @@ hr {
   }
   .zxj {
     width: 280px;
-    height: 80%;
+    height: 70%;
     float: left;
+    margin-left: 5%;
     background: url(../img/home-img-1.png) no-repeat;
+    background-size: contain;
+  }
+  .zxj:hover {
+    width: 300px;
   }
   .right-con:nth-child(2) {
     float: left;
