@@ -8,7 +8,7 @@ window.onload= function () {
     var context=canvas.getContext("2d");
 
     var balls=[];
-    var colors=["#fff"];
+    var colors=["#fff","plum"];
 
     function draw(ball){
         context.beginPath();
