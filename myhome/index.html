@@ -3,22 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <title>Document</title>
-    <link rel="stylesheet" href="css/myhome.css">
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/featureCarousel.css" charset="utf-8" />
+    <link rel="stylesheet" href="css/lubo.css" charset="utf-8" />
     <script src="js/jquery-1.4.1.min.js" type="text/javascript" charset="utf-8"></script>
     <script src="js/jquery.featureCarousel.js" type="text/javascript" charset="utf-8"></script>
-    <script src="js/myhome.js"></script>
+    <script src="js/lizi.js"></script>
     <script type="text/javascript">
         $(document).ready(function() {
             $("#featureCarousel").featureCarousel({});
         });
     </script>
+    <style>
+        canvas{
+            background: rgba(0,0,0,0);
+            position: fixed;top:0;left:0;
+            /*z-index: 1;*/
+        }
+
+    </style>
 </head>
 <body>
-<div class="home">
-    <!--<p>My Home</p>-->
-</div>
+<canvas>
+</canvas>
+
 <div id="featureCarousel">
     <div class="feature">
         <a href="myroom.html" target="_blank"><img alt="Image Caption" src="img/banner3.jpg"></a>

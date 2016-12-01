@@ -1,4 +1,6 @@
 window.onload=function(){
+
+
     //小banner
     var boxs=document.querySelector(".imgbox");
     var heights=parseInt(getComputedStyle(boxs,null).height);
@@ -73,4 +75,8 @@ window.onload=function(){
     window.onfocus=function(){
         t=setInterval(move,6000);
     }
+
+
+
+
 }

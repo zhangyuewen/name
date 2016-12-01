@@ -1,12 +1,15 @@
 @cols:30;
 @minWidth:320px;
-@conWidth:950px;
+@conWidth:988px;
 @width:1100px;
 *{
   box-sizing: border-box;
 }
 body,a,ul,li,img,p,h1,h2,h3,h4,h5,h6{
   padding:0;margin:0;text-decoration: none;list-style: none;
+}
+html,body{
+  width:100%;height:100%;
 }
 body{
   background-image: url(../img/bjtp.jpg);
@@ -29,16 +32,12 @@ body{
 }
 
 .main-body {
-  float: left;
   width: 100%;height: auto;
-  background-size: 100% auto;
-  background-attachment: fixed;
   position: relative;
 }
-.bg-box{
-  width: 80%;height: auto;
-
-}
+//.bg-box{
+//  width: 80%;height: 100%;
+//}
 
 //小屏
 .loop();
@@ -53,7 +52,7 @@ body{
 }
 .left{
   width: 310px;height: 640px;
-  position:absolute;top:10%;left:0;right:0;margin: auto;
+  position:absolute;top:0;left:0;right:0;margin: auto;
   margin-top: 15px;
 }
 .menu-con{
@@ -301,10 +300,12 @@ hr{
   .left{
     position:absolute;left:5%;margin: 0;
     margin-top: 5%;
+
   }
   .right{
-    position:absolute;top:0;left:35%;
+    position:absolute;top:0;left:5%;
     margin-top: 4%;margin-left:4%;
+
   }
   .right-con:nth-child(1){
     height:400px ;
@@ -364,10 +365,12 @@ hr{
   .left{
     position:absolute;left:5%;margin: 0;
     margin-top: 5%;
+
   }
   .right{
     position:absolute;top:0;left:30%;
-    margin-top: 4%;margin-left: 4%;
+    margin-top: 4%;
+
   }
   .right-con:nth-child(5){
     display: block;
