@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <title>ＭＹ　ＨＯＭＥ</title>
+    <link rel="stylesheet" href="css/jquery.fullPage.css">
+    <link rel="stylesheet" href="css/wy.css">
+    <script src="js/jquery-3.1.0.js"></script>
+    <script src="js/jquery.fullPage.js"></script>
+    <script src="js/kai.js"></script>
+    <script>
+        $(function(){
+
+            $('#fullpage').fullpage({
+                anchors: ['page1', 'page2', 'page3', 'page4', 'page5'],
+                menu:"fullPage-nav",
+                navigation:true,
+                navigationTooltips:["首页","介绍","技能","进入"],
+                keyboardScrolling:true,
+                afterLoad: function(anchorLink, index){
+                    var loadedSection = $(this);
+                    if(index == 1){
+                        $(".mail").css({
+                            animation:"inner 2s ease forwards"
+                        })
+                    }else {
+                        $(".mail").css({
+                            animation:"none"
+                        })
+                    }
+
+                    setInterval(function () {
+                        $(".mail .logo-tu").css({
+                            animation:"logo 25s linear 1s infinite"
+                        })
+                    },1000)
+
+                },
+
+//                onLeave: function(index, nextIndex, direction){
+//                    var leavingSection = $(this);
+//                    if(index == 5 && direction =='up'){
+//                        $(".inner").css({
+//                            animation:"out 2s ease forwards"
+//                        })
+//                    }
+//                }
+            });
+
+
+
+
+        });
+    </script>
+</head>
+<body>
+<div class="header">
+    <div class="header-bg"></div>
+    <div class="logo"></div>
+    <ul class="nav">
+        <div class="nav-bg"></div>
+        <li>
+            <a href="#">HOME</a>
+        </li>
+        <li>
+            <a href="#">ABOUT</a>
+        </li>
+        <li>
+            <a href="#">LINK1</a>
+        </li>
+        <li>
+            <a href="#">LINK2</a>
+        </li>
+    </ul>
+</div>
+<div id="fullpage">
+<div class="section section1 active">
+
+    <div class="bg bg1">
+        <!--<img src="img/section11.jpg" alt="">-->
+    </div>
+
+    <div class="mail">
+        <img src="img/logo-zi.png" alt="" class="logo-zi">
+        <img src="img/logo-zh.png" alt="" class="logo-tu">
+        <img src="img/logo-shadow.png" class="logo-shadow" alt="">
+    </div>
+
+</div>
+<div class="section section2">
+        <div class="bg"><img src="img/section33.jpg" alt=""></div>
+        <strong>[ 解剖自己 ]</strong>
+        <h3></h3>
+        <div class="bg21">
+            <p>*刘瑞琦**********<br>*************<br>****************</p>
+        </div>
+        <div class="bg22">
+            <p>**刘瑞琦***********<br>****************<br>****************</p>
+        </div>
+        <div class="bg23">
+            <p>**刘瑞琦**********<br>****************<br>****************</p>
+        </div>
+        <div class="bg24"></div>
+    </div>
+<div class="section section3">
+    <div class="bg"><img src="img/section22.jpg" alt=""></div>
+    <div class="bg31"></div>
+    <div class="bg32"></div>
+    <div class="bg33"></div>
+    <div class="bg34"></div>
+    <div class="bg35"></div>
+    <strong>[ 自我标签 ]</strong>
+    <h3></h3>
+
+</div>
+
+
+<div class="section section4">
+    <canvas height="600" width="1200" id="canvas" class="canvas">
+
+    </canvas>
+    <div class="bg"><img src="img/section44.jpg" alt=""></div>
+    <div class="bg42"></div>
+    <div class="bg43"></div>
+    <a class="go" href="../myroom.html" target="_blank"></a>
+</div>
+
+</div>
+<script>
+    "use strict";
+    var canvas = document.getElementById('canvas'),
+            ctx = canvas.getContext('2d'),
+            w = canvas.width = window.innerWidth - 25,
+            h = canvas.height = 600,
+
+            hue = 217,
+            stars = [],
+            count = 0,
+            maxStars = 1200; //星星数量
+
+    var setTimeo;
+    ctx && (function() {
+        var canvas2 = document.createElement('canvas'),
+                ctx2 = canvas2.getContext('2d');
+        canvas2.width = 300;
+        canvas2.height = 300;
+        var half = canvas2.width / 2,
+                gradient2 = ctx2.createRadialGradient(half, half, 0, half, half, half);
+//        gradient2.addColorStop(0.16, '#36567D');
+        gradient2.addColorStop(0.05, '#fff');
+//         gradient2.addColorStop(0.25, 'hsl(' + hue + ', 64%, 6%)');
+        gradient2.addColorStop(0.5, 'transparent');
+        ctx2.fillStyle = gradient2;
+        ctx2.beginPath();
+        ctx2.arc(half, half, half, 0, Math.PI * 2);
+        ctx2.fill();
+
+        // End cache
+
+        function random(min, max) {
+            if (arguments.length < 2) {
+                max = min;
+                min = 0;
+            }
+
+            if (min > max) {
+                var hold = max;
+                max = min;
+                min = hold;
+            }
+
+            return Math.floor(Math.random() * (max - min + 1)) + min;
+        }
+
+        function maxOrbit(x, y) {
+            var max = Math.max(x, y),
+                    diameter = Math.round(Math.sqrt(max * max + max * max));
+            return diameter /2;
+            //星星移动范围，值越大范围越小，
+        }
+
+        var Star = function() {
+
+            this.orbitRadius = random(maxOrbit(w, h));
+            this.radius = random(60, this.orbitRadius) / 25;
+            //星星大小
+            this.orbitX = w / 2;
+            this.orbitY = h / 2;
+            this.timePassed = random(0, maxStars);
+            this.speed = random(this.orbitRadius) / 100000;
+            //星星移动速度
+            this.alpha = random(2, 10) / 10;
+
+            count++;
+            stars[count] = this;
+        }
+
+        Star.prototype.draw = function() {
+            var x = Math.sin(this.timePassed) * this.orbitRadius + this.orbitX,
+                    y = Math.cos(this.timePassed) * this.orbitRadius + this.orbitY,
+                    twinkle = random(10);
+
+            if (twinkle === 1 && this.alpha > 0) {
+                this.alpha -= 0.05;
+            } else if (twinkle === 2 && this.alpha < 1) {
+                this.alpha += 0.05;
+            }
+
+            ctx.globalAlpha = this.alpha;
+            ctx.drawImage(canvas2, x - this.radius / 2, y - this.radius / 2, this.radius, this.radius);
+            this.timePassed += this.speed;
+        }
+
+        for (var i = 0; i < maxStars; i++) {
+            new Star();
+        }
+
+        animation();
+    })();
+
+    function animation() {
+        ctx.clearRect(0, 0, w, h);
+
+        ctx.globalCompositeOperation = 'lighter';
+        for (var i = 1, l = stars.length; i < l; i++) {
+            stars[i].draw();
+        };
+
+        // window.requestAnimationFrame(animation);
+        setTimeo = setTimeout(animation, 100);
+    }
+
+    function removeE() {
+        clearTimeout(setTimeo)
+    };
+
+    function addE() {
+        animation();
+    };
+</script>
+
+
+
+</body>
+</html>
