@@ -5,6 +5,7 @@
     <title>ＭＹ　ＨＯＭＥ</title>
     <link rel="stylesheet" href="css/jquery.fullPage.css">
     <link rel="stylesheet" href="css/wy.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
     <script src="js/jquery-3.1.0.js"></script>
     <script src="js/jquery.fullPage.js"></script>
     <script src="js/kai.js"></script>
@@ -81,7 +82,7 @@
     </div>
 
     <div class="mail">
-        <img src="img/logo-zi.png" alt="" class="logo-zi">
+        <img src="img/logo.png" alt="" class="logo-zi">
         <img src="img/logo-zh.png" alt="" class="logo-tu">
         <img src="img/logo-shadow.png" class="logo-shadow" alt="">
     </div>
@@ -92,23 +93,81 @@
         <strong>[ 解剖自己 ]</strong>
         <h3></h3>
         <div class="bg21">
-            <p>*刘瑞琦**********<br>*************<br>****************</p>
+             <div class="box">
+                 <div class="box-img">
+                      <img src="img/1.jpg" alt="">
+                 </div>
+                 <div class="box-content">
+                     <h4 class="title">性格</h4>
+                      <p class="description">*天秤座*<br>*性格沉稳，团队合作*<br>****************</p>
+                 </div>
+              </div>
         </div>
         <div class="bg22">
-            <p>**刘瑞琦***********<br>****************<br>****************</p>
+            <div class="box">
+                <div class="box-img">
+                    <img src="img/1.jpg" alt="">
+                </div>
+                <div class="box-content">
+                    <h4 class="title">个人</h4>
+                    <p class="description">*张跃文*<br>
+                        *1992.09*<br>
+                        *山西省吕梁学院*<br>
+                        *计算机科学与技术专业*</p>
+                </div>
+            </div>
         </div>
         <div class="bg23">
-            <p>**刘瑞琦**********<br>****************<br>****************</p>
+            <div class="box">
+                <div class="box-img">
+                    <img src="img/1.jpg" alt="">
+                </div>
+                <div class="box-content">
+                    <h4 class="title">工作及学习经验</h4>
+                    <p class="description">*山西唯派网络科技有限公司*<br>
+                        *任职前端工程师*<br>
+                        *主要从事web端网页及移动端app开发*</p>
+                </div>
+            </div>
         </div>
-        <div class="bg24"></div>
+        <!--<div class="bg24"></div>-->
     </div>
 <div class="section section3">
     <div class="bg"><img src="img/section22.jpg" alt=""></div>
-    <div class="bg31"></div>
-    <div class="bg32"></div>
-    <div class="bg33"></div>
-    <div class="bg34"></div>
-    <div class="bg35"></div>
+    <div class="bg31">
+        <a href="#" class="frm"></a>
+        <br>
+        <p>html+css</p>
+        <p>html5+css3</p>
+        <p>html+css</p>
+    </div>
+    <div class="bg32">
+        <a href="#" class="frm"></a>
+        <br>
+        <p>html+css</p>
+        <p>html5+css3</p>
+    </div>
+    <div class="bg33">
+        <a href="#" class="frm"></a>
+        <br>
+        <p>javascript</p>
+        <p>jQuery</p>
+        <p>node.js</p>
+        <p>angular.js</p>
+        <p>react.js</p>
+        <p></p>
+    </div>
+    <div class="bg34">
+        <a href="#" class="frm"></a>
+        <br>
+        <p>php</p>
+        <p>phpcms</p>
+    </div>
+    <div class="bg35">
+        <a href="#" class="frm"></a>
+        <br>
+        <p>mysql</p>
+    </div>
     <strong>[ 自我标签 ]</strong>
     <h3></h3>
 
@@ -176,7 +235,7 @@
             var max = Math.max(x, y),
                     diameter = Math.round(Math.sqrt(max * max + max * max));
             return diameter /2;
-            //星星移动范围，值越大范围越小，
+            //星星移动范围，值越大范围越小
         }
 
         var Star = function() {

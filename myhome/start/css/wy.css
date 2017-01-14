@@ -198,65 +198,100 @@ canvas{
     width: 561px;
     background-image: url(../img/t3.png);
 }
+
 .bg31 {
     position: absolute;
-    left: 20%; top: 40%;
+    left: 25%; top: 30%;
     width: 20%; height: 200px;
-    background: url(../img/i1.png) 50% 0 no-repeat;
     opacity: 0;
     transition: all 1s;
 }
 .bg32 {
     position: absolute;
-    left: 30%; top: 40%;
+    left: 35%; top: 30%;
     width: 20%; height: 200px;
-    background: url(../img/i1.png) 50% 0 no-repeat;
     opacity: 0;
     transition: all 1s;
 }
 .bg33 {
     position: absolute;
-    left: 40%; top: 40%;
+    left: 45%; top: 30%;
     width: 20%; height: 200px;
-    background: url(../img/i1.png) 50% 0 no-repeat;
     opacity: 0; transition: all 1s;
 }
 .bg34{
      position: absolute;
-     left: 50%; top: 40%;
+     left: 55%; top: 30%;
      width: 20%; height: 200px;
-     background: url(../img/i1.png) 50% 0 no-repeat;
      opacity: 0; transition: all 1s;
  }
 .bg35{
     position: absolute;
-    left: 60%; top: 40%;
+    left: 65%; top: 30%;
     width: 20%; height: 200px;
-    background: url(../img/i1.png) 50% 0 no-repeat;
     opacity: 0; transition: all 1s;
 }
+.bg31,.bg32,.bg33,.bg34,.bg35{
+    background-size: 30% ;
+}
+.bg31 a{
+    background: url(../img/bg31.png) 50% 0 no-repeat;
+}
+.bg32 a{
+    background: url(../img/bg32.png) 50% 0 no-repeat;
+}
+.bg33 a{
+    background: url(../img/bg33.png) 50% 0 no-repeat;
+}
+.bg34 a{
+    background: url(../img/bg34.png) 50% 0 no-repeat;
+}
+.bg35 a{
+    background: url(../img/bg35.png) 50% 0 no-repeat;
+}
+.frm{
+    cursor:pointer;
+    display:block;
+    width:85px;
+    height:81px;
+    background-size:83px 166px;
+    background-repeat:no-repeat;
+    background-position:0 0;
+    -webkit-transition:all .25s ease-out;
+    -moz-transition:all .25s ease-out;
+    -ms-transition:all .25s ease-out;
+    transition:all .25s ease-out;
+}
+.frm:hover{background-position:0 -80px;
+    -webkit-transform:rotate(-90deg);
+    -moz-transform:rotate(-90deg);
+    -ms-transform:rotate(-90deg);
+    transform:rotate(-90deg);
+}
+
+
 .active .bg31 {
-    top: 50%;
+    top: 40%;
     opacity: 1;
     transition-delay: 0.7s;
 }
 .active .bg32 {
-    top: 50%;
+    top: 40%;
     opacity: 1;
     transition-delay: 0.9s;
 }
 .active .bg33 {
-    top: 50%;
+    top: 40%;
     opacity: 1;
     transition-delay: 1.2s;
 }
 .active .bg34 {
-    top: 50%;
+    top: 40%;
     opacity: 1;
     transition-delay: 1.5s;
 }
 .active .bg35 {
-    top: 50%;
+    top: 40%;
     opacity: 1;
     transition-delay: 1.8s;
 }
@@ -280,21 +315,20 @@ canvas{
 }
 .bg21 {
     position: absolute;
-    left: 10%;
+    left: 5%;
     bottom: 15%;
-    width: 340px;
-    background: url(../img/i1.png) 50% 0 no-repeat;
+    /*background: url(../img/i1.png) 50% 0 no-repeat;*/
     opacity: 0;
     transition: all 1s;
 }
-.bg21 p {
-    position: relative; left: 0;
-    text-align: center;
-}
+/*.bg21 p {*/
+    /*position: relative; left: 0;*/
+    /*text-align: center;*/
+/*}*/
 .bg22 {
+    width: 300px;
     position: absolute; left: 0; right:0;bottom: 15%;margin: auto;
-    width: 340px;
-    background: url(../img/i1.png) 50% 0 no-repeat;
+    /*background: url(../img/i1.png) 50% 0 no-repeat;*/
     opacity: 0;
     transition: all 1s;
 }
@@ -304,19 +338,18 @@ canvas{
 }
 .bg23 {
     position: absolute;
-    right: 10%;
+    right: 5%;
     bottom: 15%;
-    width: 340px;
-    background: url(../img/i1.png) 50% 0 no-repeat;
+    /*background: url(../img/i1.png) 50% 0 no-repeat;*/
     opacity: 0; transition: all 1s;
 
 }
-.bg23 p {
-    position: relative; left: 0;
-    text-align: center;
-}
+/*.bg23 p {*/
+    /*position: relative; left: 0;*/
+    /*text-align: center;*/
+/*}*/
 .active .bg21 {
-    left: 20%;
+    left: 10%;
     opacity: 1;
     transition-delay: 0.7s;
 }
@@ -325,7 +358,7 @@ canvas{
     transition-delay: 0.8s;
 }
 .active .bg23 {
-    right: 20%;
+    right: 10%;
     opacity: 1;
     transition-delay: 0.7s;
 }
